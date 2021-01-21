@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ELEC</title>
+  <link rel="stylesheet" href="./bootstrap.css">
+  <link rel="stylesheet" href="./index.css">
+  <script src="./vue.min.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <form>
+      <div class="form-group row">
+        <label for="Pattern" class="col-sm-5 col-form-label">Pattern Type:</label>
+        <div class="col-sm-7">
+          <input type="text" class="form-control" id="Pattern" v-model="pattern">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="Neckline" class="col-sm-5 col-form-label">Neckline:</label>
+        <div class="col-sm-7">
+          <input type="text" class="form-control" id="Neckline" v-model="neckline">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="Length" class="col-sm-5 col-form-label">Length:</label>
+        <div class="col-sm-7">
+          <input type="text" class="form-control" id="Length" v-model="length">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="Sleeve" class="col-sm-5 col-form-label">Sleeve Length:</label>
+        <div class="col-sm-7">
+          <input type="text" class="form-control" id="Sleeve" v-model="sleeve">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="Season" class="col-sm-5 col-form-label">Season:</label>
+        <div class="col-sm-7">
+          <input type="text" class="form-control" id="Season" v-model="season">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="Material" class="col-sm-5 col-form-label">Material:</label>
+        <div class="col-sm-7">
+          <input type="text" class="form-control" id="Material" v-model="material">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="Fit" class="col-sm-5 col-form-label">Fit Type:</label>
+        <div class="col-sm-7">
+          <input type="text" class="form-control" id="Fit" v-model="fit">
+        </div>
+      </div>
+      <button id="gen" @click="genHTMLText" type="button" class="btn btn-primary">生成HTML</button>
+    </form>
+
+    <textarea id="area" :value="html_text" spellcheck="false"></textarea>
+  </div>
+
+  <script src="./index.js"></script>
+</body>
+
+</html>
